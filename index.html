@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" href="images/eco-img.ico">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<title>Login Using Sass</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="container">
+        <div class="img-box">
+
+        </div>
+        <form>
+            <label>User Name: </label><br>
+            <input type="text" name="user">
+            <label>Password: </label><br>
+            <div>
+                <input type="password" name="pass" id="inputpass">
+                <div class="show_pass" onclick="showpass()"><img src="images/closeye.png"  id="eye"></div>
+            </div>
+            <input type="submit" name="submit" value="SUBMIT">
+        </form><!-- this is the end of the form-->
+    </div><!-- this is the end of the container -->
+</div><!-- this is the end of main container -->
+
+
+<!-- this is the javascript-->
+<script>
+    function showpass(){
+        var x = document.getElementById("inputpass");
+        if(x.type === "password"){
+            x.type = "text";
+            x.className = "nwstyle";
+            document.getElementById("eye").src='images/openeye.png';
+
+        } else {
+            x.type = "password";
+            document.getElementById("eye").src='images/closeye.png';
+        }
+    }
+</script>
+
+</body>
+</html>
